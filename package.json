@@ -4,13 +4,15 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "SET PORT=3000 && nodemon app.js",
+    "start": "SET PORT=3000 && SET NODE_ENV=development && nodemon app.js",
+    "start:prod": "SET NODE_ENV=production && nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "dotenv": "^16.0.0",
+    "errorhandler": "^1.5.1",
     "express": "^4.17.3",
     "mongoose": "^6.2.6",
     "morgan": "^1.10.0",
